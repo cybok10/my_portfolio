@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sathish M - Professional Cybersecurity Expert & Ethical Hacker Portfolio">
+    <meta name="keywords" content="cybersecurity, ethical hacking, penetration testing, computer science">
+    <meta name="author" content="Sathish M">
+    <title>Sathish M - Cybersecurity Expert & Ethical Hacker</title>
+    
+    <!-- External Resources -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css" >
+    
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Floating Cybersecurity Icons -->
+    <div class="floating-icons">
+        <div class="floating-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="floating-icon"><i class="fas fa-lock"></i></div>
+        <div class="floating-icon"><i class="fas fa-bug"></i></div>
+        <div class="floating-icon"><i class="fas fa-key"></i></div>
+        <div class="floating-icon"><i class="fas fa-server"></i></div>
+        <div class="floating-icon"><i class="fas fa-wifi"></i></div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo"></div>
+            <h4>Loading Portfolio...</h4>
+            <p>Initializing cybersecurity systems...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-shield-alt me-2"></i>Sathish M
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <i class="fas fa-shield-virus"></i>
+                            Cybersecurity Expert
+                        </div>
+                        <h1 class="hero-title">
+                            Hi, I'm <span class="text-gradient">Sathish M</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            I'm a <span class="typing-text" id="typed-text"></span> passionate about protecting digital assets and hunting down vulnerabilities in complex systems.
+                        </p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div style="display: flex;" >
+                                    <span class="stat-number" data-count="500">0</span><span class="stat-plus">+</span>
+
+                                </div>
+                                <span class="stat-label">Connections</span>
+                            </div>
+                            <div class="stat-item">
+                                <div style="display: flex;" >
+                                    <span class="stat-number" data-count="15">0</span><span class="stat-plus">+</span>
+                                </div>
+                                <span class="stat-label">Certifications</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="3">0</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                        </div>
+                        <div style="display: flex;align-items: center;justify-content: flex-start;gap: 15px;">
+                            <a href="mailto:sathish1012cybok@gmail.com" class="social-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sathish-m-715120281/" class="social-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/cybok10" class="social-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://x.com/_sathish_ms" class="social-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-envelope"></i>
+                                Get In Touch
+                            </a>
+                            <a href="#" class="btn btn-outline" id="downloadCV">
+                                <i class="fas fa-download"></i>
+                                Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="profile-container animate-float">
+                        <div class="profile-glow"></div>
+                        <img src="./images/hero-profile.png" alt="Sathish M - Cybersecurity Expert" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Dedicated cybersecurity professional with a passion for digital defense and ethical hacking</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3 class="card-title">Professional Profile</h3>
+                        <div class="card-description">
+                            <p><strong>Name:</strong> Sathish M</p>
+                            <p><strong>Status:</strong> <span class="text-gradient">Certified Penetration Tester</span></p>
+                            <p><strong>Education:</strong> B.E Computer Science and Engineering<br>
+                            <small class="text-muted">Dhanalakshmi Srinivasan Engineering College (Oct 2022 - Dec 2026)</small></p>
+                            <p><strong>Location:</strong> Villupuram, Tamil Nadu, India</p>
+                            <p><strong>Email:</strong> sathish1012cybok@gmail.com</p>
+                            <p><strong>phone:</strong> +91 95971 24881</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="card-title">Mission & Vision</h3>
+                        <div class="card-description">
+                            <div class="mb-4">
+                                <h6 class="text-gradient">Cybersecurity Mastery</h6>
+                                <p>Deeply intrigued by ethical hacking and threat analysis, finding immense satisfaction in learning how to safeguard digital environments and hunt down vulnerabilities.</p>
+                            </div>
+                            <div class="mb-4">
+                                <h6 class="text-gradient">AI & IoT Integration</h6>
+                                <p>Enthusiastic about Internet of Things (IoT) and Artificial Intelligence (AI), seeing them as transformative technologies for creating impactful security solutions.</p>
+                            </div>
+                            <div>
+                                <h6 class="text-gradient">CTF Excellence</h6>
+                                <p>Active participant in Capture The Flag competitions, constantly sharpening skills through hands-on challenges and real-world attack scenarios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Comprehensive cybersecurity skill set across offensive and defensive domains</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category">
+                        <div class="card-icon mx-auto">
+                            <i class="fas fa-user-ninja"></i>
+                        </div>
+                        <h4 class="card-title text-gradient">Offensive Security</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Penetration Testing</span>
+                            <span class="skill-tag">Vulnerability Assessment</span>
+                            <span class="skill-tag">Web App Security</span>
+                            <span class="skill-tag">Network Exploitation</span>
+                            <span class="skill-tag">Wireless Hacking</span>
+                            <span class="skill-tag">Social Engineering</span>
+                            <span class="skill-tag">Exploit Development</span>
+                            <span class="skill-tag">Red Team Operations</span>
+                            <span class="skill-tag">OSINT</span>
+                            <span class="skill-tag">Malware Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category">
+                        <div class="card-icon mx-auto">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="card-title text-gradient">Defensive Security</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">SIEM Management</span>
+                            <span class="skill-tag">Incident Response</span>
+                            <span class="skill-tag">Digital Forensics</span>
+                            <span class="skill-tag">Threat Hunting</span>
+                            <span class="skill-tag">SOC Operations</span>
+                            <span class="skill-tag">Cryptography</span>
+                            <span class="skill-tag">Network Security</span>
+                            <span class="skill-tag">Cloud Security</span>
+                            <span class="skill-tag">Compliance</span>
+                            <span class="skill-tag">Risk Assessment</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-category">
+                        <div class="card-icon mx-auto">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4 class="card-title text-gradient">Technical Arsenal</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Bash/Shell</span>
+                            <span class="skill-tag">C/C++</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Kali Linux</span>
+                            <span class="skill-tag">Burp Suite</span>
+                            <span class="skill-tag">Metasploit</span>
+                            <span class="skill-tag">Nmap</span>
+                            <span class="skill-tag">Wireshark</span>
+                            <span class="skill-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform Skills -->
+            <div class="row mt-5">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="glass-card text-center">
+                        <h4 class="card-title text-gradient mb-4">Training Platforms & Competitions</h4>
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <div class="card-icon mx-auto mb-3" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-flag"></i>
+                                </div>
+                                <h6>TryHackMe</h6>
+                                <small class="text-muted">Active CTF Player</small>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="card-icon mx-auto mb-3" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-cube"></i>
+                                </div>
+                                <h6>HackTheBox</h6>
+                                <small class="text-muted">Penetration Testing</small>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="card-icon mx-auto mb-3" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <h6>IoT Development</h6>
+                                <small class="text-muted">Arduino & Raspberry Pi</small>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <div class="card-icon mx-auto mb-3" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <h6>Cloud Security</h6>
+                                <small class="text-muted">AWS, GCP, Azure</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">Professional journey in cybersecurity and ethical hacking</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Dec 2024 - Present</div>
+                        <h4 class="timeline-title">CTF Player</h4>
+                        <div class="timeline-company">TryHackMe • Freelance</div>
+                        <p class="card-description">Active participation in Capture The Flag competitions, enhancing practical cybersecurity skills through hands-on challenges and real-world attack scenarios. Consistently ranking in top percentile of participants.</p>
+                        <div class="skill-tags mt-3">
+                            <span class="skill-tag">CTF</span>
+                            <span class="skill-tag">Forensics</span>
+                            <span class="skill-tag">Cryptography</span>
+                            <span class="skill-tag">Web Exploitation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Nov 2024 - Dec 2024</div>
+                        <h4 class="timeline-title">Cybersecurity Intern</h4>
+                        <div class="timeline-company">The Red Users • Remote</div>
+                        <p class="card-description">Completed comprehensive cybersecurity internship focusing on threat analysis, vulnerability assessment, and security protocols. Gained hands-on experience with enterprise security tools and incident response procedures.</p>
+                        <div class="skill-tags mt-3">
+                            <span class="skill-tag">Threat Analysis</span>
+                            <span class="skill-tag">VAPT</span>
+                            <span class="skill-tag">Incident Response</span>
+                            <span class="skill-tag">Security Protocols</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jul 2024 - Aug 2024</div>
+                        <h4 class="timeline-title">Ethical Hacking Specialist</h4>
+                        <div class="timeline-company">InternshipStudio • Remote</div>
+                        <p class="card-description">Specialized training in network scanning, vulnerability analysis, exploit development, penetration testing, and incident response methodologies. Mastered advanced ethical hacking techniques and tools.</p>
+                        <div class="skill-tags mt-3">
+                            <span class="skill-tag">Penetration Testing</span>
+                            <span class="skill-tag">Exploit Development</span>
+                            <span class="skill-tag">Network Scanning</span>
+                            <span class="skill-tag">Vulnerability Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-subtitle">Industry-recognized credentials validating cybersecurity expertise</p>
+            </div>
+            
+            <div class="cert-grid">
+                <div class="cert-card" data-aos="fade-up">
+                    <div class="cert-icon">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <h5 class="cert-title">Certified Penetration Testing</h5>
+                    <div class="cert-issuer">Redteam Hacker Acadamy</div>
+                    <div class="cert-date">on going</div>
+                    <small class="text-muted d-block mt-2">ID: G7Q7W5R3RWTS3S1N7EZu14</small>
+                </div>
+
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="200"> 
+                    <div class="cert-icon">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <h5 class="cert-title">Advanced Ethical Hacking</h5>
+                    <div class="cert-issuer">HCL GUVI</div>
+                    <div class="cert-date">Issued Oct 2023</div>
+                    <small class="text-muted d-block mt-2">ID: G7Q7W5R3RWTS3S1N7EZu14</small>
+                </div>
+
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h5 class="cert-title">Internet of Things</h5>
+                    <div class="cert-issuer">NPTEL</div>
+                    <div class="cert-date">Issued Oct 2023</div>
+                </div>
+
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cert-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <h5 class="cert-title">Mastering Linux</h5>
+                    <div class="cert-issuer">Infosec Institute</div>
+                    <div class="cert-date">Issued Oct 2023</div>
+                </div>
+
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cert-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h5 class="cert-title">Network Security</h5>
+                    <div class="cert-issuer">Infosec Institute</div>
+                    <div class="cert-date">Issued Oct 2023</div>
+                </div>
+
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h5 class="cert-title">SOC Member</h5>
+                    <div class="cert-issuer">CyberSentry</div>
+                    <div class="cert-date">Issued Oct 2023</div>
+                </div>
+
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="cert-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h5 class="cert-title">Offensive PenTesting</h5>
+                    <div class="cert-issuer">CyberLY</div>
+                    <div class="cert-date">Issued Oct 2023</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section ================= newly added -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">Notable accomplishments and recognitions in cybersecurity</p>
+            </div>
+        <div class="achievements-grid">
+            <div class="achievement-item" data-aos="fade-up">
+                <div class="achievement-image">
+                    <img src="images/archievement7.jpeg" alt="Achievement 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="achievement-placeholder" style="display: none;">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                </div>
+                <h6>OWASP meetup</h6>
+                <small class="text-white">OWASP coimbatore chapter</small>
+            </div>
+            
+            <div class="achievement-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="achievement-image">
+                    <img src="images/archievement6.jpeg" alt="Achievement 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="achievement-placeholder" style="display: none;">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                </div>
+                <h6>cybersecurity conference</h6>
+                <small class="text-white">International cybersecurity conference</small>
+            </div>
+            
+            <div class="achievement-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="achievement-image">
+                    <img src="images/archievement5.jpeg" alt="Achievement 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="achievement-placeholder" style="display: none;">
+                        <i class="fas fa-award"></i>
+                    </div>
+                </div>
+                <h6>Network security</h6>
+                <small class="text-white">Internship - promptInfotech</small>
+            </div>
+            
+            <div class="achievement-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="achievement-image">
+                    <img src="images/archievement3.jpeg" alt="Achievement 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="achievement-placeholder" style="display: none;">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <h6>Ethical Hacking Workshop</h6>
+                <small class="text-white">NIT - Remarkskills </small>
+            </div>
+            
+            <div class="achievement-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="achievement-image">
+                    <img src="images/archievement4.jpeg" alt="Achievement 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="achievement-placeholder" style="display: none;">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                </div>
+                <h6>CTF archievement</h6>
+                <small class="text-white">THIRAN CTF</small>
+            </div>
+            
+            <div class="achievement-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="achievement-image">
+                    <img src="images/archievement2.jpeg" alt="Achievement 6" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="achievement-placeholder" style="display: none;">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                </div>
+                <h6>CTF</h6>
+                <small class="text-white">Pragyan - NIT</small>
+            </div>
+            <div class="achievement-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="achievement-image">
+                    <img src="images/archievement1.jpeg" alt="Achievement 7" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="achievement-placeholder" style="display: none;">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                </div>
+                <h6>PowerBI Training </h6>
+                <small class="text-white">ICT acadamey</small>
+            </div>
+        </div>
+        <!-- <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">Notable accomplishments and recognitions in cybersecurity</p>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-item" data-aos="fade-up">
+                    <div class="achievement-image">
+                        <div class="achievement-placeholder">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
+                    <h6>Achievement 1</h6>
+                    <small class="text-muted">Click to view details</small>
+                </div>
+                
+                <div class="achievement-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement-image">
+                        <div class="achievement-placeholder">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                    </div>
+                    <h6>Achievement 2</h6>
+                    <small class="text-muted">Click to view details</small>
+                </div>
+                
+                <div class="achievement-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="achievement-image">
+                        <div class="achievement-placeholder">
+                            <i class="fas fa-award"></i>
+                        </div>
+                    </div>
+                    <h6>Achievement 3</h6>
+                    <small class="text-muted">Click to view details</small>
+                </div>
+                
+                <div class="achievement-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="achievement-image">
+                        <div class="achievement-placeholder">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h6>Achievement 4</h6>
+                    <small class="text-muted">Click to view details</small>
+                </div>
+                
+                <div class="achievement-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="achievement-image">
+                        <div class="achievement-placeholder">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <h6>Achievement 5</h6>
+                    <small class="text-muted">Click to view details</small>
+                </div>
+                
+                <div class="achievement-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="achievement-image">
+                        <div class="achievement-placeholder">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                    </div>
+                    <h6>Achievement 6</h6>
+                    <small class="text-muted">Click to view details</small>
+                </div>
+            </div>
+        </div> -->
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Innovative cybersecurity solutions and security research initiatives</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4 class="card-title">Centralized Log Monitoring System</h4>
+                        <p class="card-description">Designed and implemented a comprehensive centralized log monitoring solution using Google Cloud Platform (GCP) and Wazuh SIEM. Features real-time threat detection, automated incident response, and custom dashboard analytics.</p>
+                        <div class="skill-tags mb-3">
+                            <span class="skill-tag">GCP</span>
+                            <span class="skill-tag">Wazuh SIEM</span>
+                            <span class="skill-tag">Apache</span>
+                            <span class="skill-tag">Ubuntu</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h4 class="card-title">Automated Penetration Testing Tool</h4>
+                        <p class="card-description">Developed a comprehensive automated vulnerability scanner with custom exploit modules, web application security testing capabilities, and detailed reporting system.</p>
+                        <div class="skill-tags mb-3">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Metasploit</span>
+                            <span class="skill-tag">Nmap</span>
+                            <span class="skill-tag">OWASP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h4 class="card-title">Smart Home Security Audit</h4>
+                        <p class="card-description">Comprehensive security assessment of IoT devices including protocol analysis, firmware reverse engineering, and network traffic monitoring.</p>
+                        <div class="skill-tags mb-3">
+                            <span class="skill-tag">Arduino</span>
+                            <span class="skill-tag">Wireshark</span>
+                            <span class="skill-tag">Firmware Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to collaborate on your next cybersecurity challenge?</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form" data-aos="fade-up">
+                        <div class="discord-info">
+                            <i class="fab fa-discord me-2"></i>
+                            Messages will be sent to my Discord server for faster response!
+                        </div>
+                        
+                        <div id="messageContainer"></div>
+                        
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Name *</label>
+                                        <input type="text" class="form-control" name="name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Email *</label>
+                                        <input type="email" class="form-control" name="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Subject *</label>
+                                <input type="text" class="form-control" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message *</label>
+                                <textarea class="form-control" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="glass-card text-center">
+                        <div class="card-icon mx-auto">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5 class="card-title">Email & ph.no</h5>
+                        <p class="card-description">sathish1012cybok@gmail.com</p>
+                        <p class="card-description">+91 95971 24881</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card text-center">
+                        <div class="card-icon mx-auto">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5 class="card-title">Location</h5>
+                        <p class="card-description">Villupuram, Tamil Nadu, India</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card text-center">
+                        <div class="card-icon mx-auto">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h5 class="card-title">Availability</h5>
+                        <p class="card-description">Open to opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="display: flex;align-items: center;justify-content: flex-start;gap: 15px;">
+                <a href="mailto:sathish1012cybok@gmail.com" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sathish-m-715120281/" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/cybok10" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/_sathish_ms" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="text-center">
+                <p class="text-white">
+                    &copy; 2024 Sathish M. All rights reserved | 
+                    <span class="text-gradient">Securing the digital frontier</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+
+    <!-- External Scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+    <script src="script/script.js"></script>
+
+    <!-- Additional CSS for keyboard navigation -->
+    <style>
+        /* Focus styles for keyboard navigation */
+        .keyboard-navigation *:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary: #0066cc;
+                --text-primary: #000000;
+                --bg-primary: #ffffff;
+                --border-light: #000000;
+            }
+            
+            .glass-card,
+            .contact-form,
+            .cert-card,
+            .achievement-item {
+                border: 2px solid var(--border-light);
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .floating-icon {
+                animation: none;
+            }
+
+            .animated-bg {
+                animation: none;
+                background: #1a1a2e;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .navbar,
+            .theme-toggle,
+            .animated-bg,
+            .floating-icons {
+                display: none !important;
+            }
+            
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+
+</body>
+</html>
