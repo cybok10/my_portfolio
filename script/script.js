@@ -562,37 +562,169 @@ if (downloadCV) {
     });
 }
 
-        // Achievement items click handler
-        const achievementItems = document.querySelectorAll('.achievement-item');
-        achievementItems.forEach((item, index) => {
-            item.addEventListener('click', function() {
-                const input = document.createElement('input');
-                input.type = 'file';
-                input.accept = 'image/*';
-                input.onchange = function(e) {
-                    const file = e.target.files[0];
-                    if (file) {
-                        const reader = new FileReader();
-                        reader.onload = function(e) {
-                            const imageDiv = item.querySelector('.achievement-image');
-                            imageDiv.innerHTML = `<img src="${e.target.result}" alt="Achievement ${index + 1}">`;
-                            
-                            // Store in localStorage for persistence
-                            localStorage.setItem(`achievement-${index}`, e.target.result);
-                        };
-                        reader.readAsDataURL(file);
-                    }
+ // REMOVE THIS ENTIRE SECTION - VULNERABLE CODE:
+/*
+// Achievement items click handler - REMOVE THIS
+const achievementItems = document.querySelectorAll('.achievement-item');
+achievementItems.forEach((item, index) => {
+    item.addEventListener('click', function() {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = 'image/*';
+        input.onchange = function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imageDiv = item.querySelector('.achievement-image');
+                    imageDiv.innerHTML = `<img src="${e.target.result}" alt="Achievement ${index + 1}">`;
+                    
+                    // Store in localStorage for persistence
+                    localStorage.setItem(`achievement-${index}`, e.target.result);
                 };
-                input.click();
-            });
-
-            // Load saved images
-            const savedImage = localStorage.getItem(`achievement-${index}`);
-            if (savedImage) {
-                const imageDiv = item.querySelector('.achievement-image');
-                imageDiv.innerHTML = `<img src="${savedImage}" alt="Achievement ${index + 1}">`;
+                reader.readAsDataURL(file);
             }
-        });
+        };
+        input.click();
+    });
+
+    // Load saved images
+    const savedImage = localStorage.getItem(`achievement-${index}`);
+    if (savedImage) {
+        const imageDiv = item.querySelector('.achievement-image');
+        imageDiv.innerHTML = `<img src="${savedImage}" alt="Achievement ${index + 1}">`;
+    }
+});
+*/
+
+// REPLACE WITH THIS SECURE VERSION:
+
+// Achievement items - secure version with modal display
+const achievementItems = document.querySelectorAll('.achievement-item');
+achievementItems.forEach((item, index) => {
+    item.addEventListener('click', function() {
+        // Show achievement details in a modal instead of allowing uploads
+        showAchievementModal(index, this);
+    });
+});
+
+// Secure achievement modal function
+function showAchievementModal(index, element) {
+    const title = element.querySelector('h6').textContent;
+    const description = element.querySelector('small').textContent;
+    const imgSrc = element.querySelector('img')?.src || '';
+    
+    // Create modal overlay
+    const modal = document.createElement('div');
+    modal.className = 'achievement-modal';
+    modal.innerHTML = `
+        <div class="modal-overlay" onclick="closeAchievementModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>${title}</h5>
+                <button class="modal-close" onclick="closeAchievementModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                ${imgSrc ? `<img src="${imgSrc}" alt="${title}" class="modal-image">` : ''}
+                <p>${description}</p>
+                <p class="text-muted">This achievement demonstrates expertise in cybersecurity and professional development.</p>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    modal.style.display = 'flex';
+    
+    // Add modal styles if not already present
+    if (!document.getElementById('modal-styles')) {
+        const styles = document.createElement('style');
+        styles.id = 'modal-styles';
+        styles.textContent = `
+            .achievement-modal {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 10000;
+            }
+            .modal-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                backdrop-filter: blur(5px);
+            }
+            .modal-content {
+                background: var(--bg-card);
+                border: 1px solid var(--border-light);
+                border-radius: 20px;
+                max-width: 600px;
+                width: 90%;
+                max-height: 80vh;
+                overflow: auto;
+                position: relative;
+                z-index: 1;
+            }
+            .modal-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.5rem;
+                border-bottom: 1px solid var(--border-light);
+            }
+            .modal-close {
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: var(--text-secondary);
+                padding: 0.5rem;
+                border-radius: 50%;
+                transition: all 0.3s ease;
+            }
+            .modal-close:hover {
+                background: var(--bg-secondary);
+                color: var(--text-primary);
+            }
+            .modal-body {
+                padding: 1.5rem;
+                text-align: center;
+            }
+            .modal-image {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+                border-radius: 12px;
+                margin-bottom: 1rem;
+                box-shadow: var(--shadow-md);
+            }
+        `;
+        document.head.appendChild(styles);
+    }
+}
+
+// Function to close achievement modal
+function closeAchievementModal() {
+    const modal = document.querySelector('.achievement-modal');
+    if (modal) {
+        modal.remove();
+    }
+}
+
+// Close modal on escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeAchievementModal();
+    }
+});
 
         // Skill tags hover effect
         function addSkillTagEffects() {
